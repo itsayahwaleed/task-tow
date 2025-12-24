@@ -127,3 +127,5 @@ document.querySelector('#deleteDoneBtn').addEventListener('click', () => {
     updateStorage();
     renderTasks();
 });
+// التشغيل الأولي
+renderTasks();
