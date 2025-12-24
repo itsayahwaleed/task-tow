@@ -10,3 +10,12 @@ const errorMessage = document.querySelector('#errorMessage');
 const customModal = document.querySelector('#customModal');
 const modalInput = document.querySelector('#modalInput');
 const modalError = document.querySelector('#modalError');
+// 3. دوال مساعدة (Arrow Functions)
+const updateStorage = () => localStorage.setItem('js_tasks', JSON.stringify(tasks));
+
+const validate = (val) => {
+    if (!val.trim()) return "Task cannot be empty.";
+    if (val.trim().length < 5) return "Task must be at least 5 characters long.";
+    if (/^\d/.test(val.trim())) return "Task cannot start with a number.";
+    return null;
+};
