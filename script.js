@@ -28,3 +28,17 @@ const renderTasks = () => {
         if (currentFilter === 'todo') return !t.completed;
         return true;
     });
+    
+    filtered.forEach(task => {
+        const item = document.createElement('div');
+        item.className = `task-item ${task.completed ? 'completed' : ''}`;
+        item.innerHTML = `
+            <span>${task.text}</span>
+            <div class="task-actions">
+                <i class="fas fa-check" onclick="toggleStatus(${task.id})"></i>
+                <i class="fas fa-edit" onclick="openRenameModal(${task.id})"></i>
+                <i class="fas fa-trash" onclick="confirmDelete(${task.id})"></i>
+            </div>
+        `;
+        taskList.appendChild(item);
+    });
