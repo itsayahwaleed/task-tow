@@ -19,6 +19,21 @@
             <p id="errorMessage" class="error-msg"></p>
             <button id="addTaskBtn" class="primary-btn">Add new task</button>
         </div>
+         <h2>odo List</h2>
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="done">Done</button>
+            <button class="filter-btn" data-filter="todo">Todo</button>
+        </div>
+
+        <div id="taskList" class="task-container">
+            </div>
+
+        <div class="footer-actions">
+            <button id="deleteDoneBtn" class="danger-btn">Delete Done Tasks</button>
+            <button id="deleteAllBtn" class="danger-btn">Delete All Tasks</button>
+        </div>
+    </div>
     
 </body>
 </html>
