@@ -42,3 +42,7 @@ const renderTasks = () => {
         `;
         taskList.appendChild(item);
     });
+       // تحديث حالة أزرار الحذف (تعطيل في حال عدم وجود مهام)
+    document.querySelector('#deleteAllBtn').disabled = tasks.length === 0;
+    document.querySelector('#deleteDoneBtn').disabled = !tasks.some(t => t.completed);
+};
