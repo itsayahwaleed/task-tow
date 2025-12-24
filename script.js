@@ -64,4 +64,17 @@ window.toggleStatus = (id) => {
     tasks = tasks.map(t => t.id === id ? {...t, completed: !t.completed} : t);
     updateStorage();
     renderTasks();
+}
+window.confirmDelete = (id) => {
+    // استخدام المودال المخصص بدلاً من alert
+    currentEditId = id;
+    document.querySelector('#modalTitle').textContent = "Confirm Delete?";
+    modalInput.style.display = 'none';
+    customModal.style.display = 'flex';
+    document.querySelector('#confirmBtn').onclick = () => {
+        tasks = tasks.filter(t => t.id !== id);
+        updateStorage();
+        closeModal();
+        renderTasks();
+    };
 };
