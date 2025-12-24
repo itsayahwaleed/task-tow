@@ -53,3 +53,9 @@ const addTask = () => {
         errorMessage.textContent = error;
         return;
     }
+        errorMessage.textContent = '';
+    tasks.push({ id: Date.now(), text: taskInput.value.trim(), completed: false });
+    updateStorage();
+    taskInput.value = '';
+    renderTasks();
+};
