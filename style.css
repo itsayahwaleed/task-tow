@@ -7,3 +7,9 @@
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; display: flex; justify-content: center; padding: 20px; }
 .container { width: 100%; max-width: 700px; background: white; padding: 30px; border: 1px solid var(--border); }
 h2 { text-align: center; margin-bottom: 20px; color: #333; }
+/* Input Section */
+.input-card { margin-bottom: 40px; }
+.input-group { display: flex; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.input-group .icon { background: #eee; padding: 12px; color: var(--primary); border-right: 1px solid var(--border); }
+.input-group input { border: none; flex: 1; padding: 10px; outline: none; }
+.primary-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 12px; margin-top: 10px; cursor: pointer; border-radius: 4px; font-weight: bold; }
