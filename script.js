@@ -46,3 +46,10 @@ const renderTasks = () => {
     document.querySelector('#deleteAllBtn').disabled = tasks.length === 0;
     document.querySelector('#deleteDoneBtn').disabled = !tasks.some(t => t.completed);
 };
+
+const addTask = () => {
+    const error = validate(taskInput.value);
+    if (error) {
+        errorMessage.textContent = error;
+        return;
+    }
