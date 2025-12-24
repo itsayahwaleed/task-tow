@@ -1,0 +1,9 @@
+:root {
+    --primary: #17a2b8;
+    --danger: #dc3545;
+    --border: #dee2e6;
+}
+
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; display: flex; justify-content: center; padding: 20px; }
+.container { width: 100%; max-width: 700px; background: white; padding: 30px; border: 1px solid var(--border); }
+h2 { text-align: center; margin-bottom: 20px; color: #333; }
