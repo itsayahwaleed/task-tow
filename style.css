@@ -25,3 +25,10 @@ h2 { text-align: center; margin-bottom: 20px; color: #333; }
 .fa-check { color: #28a745; }
 .fa-edit { color: #ffc107; }
 .fa-trash { color: var(--danger); }
+/* Footer */
+.footer-actions { display: flex; gap: 20px; margin-top: 30px; }
+.danger-btn { flex: 1; background: var(--danger); color: white; border: none; padding: 12px; cursor: pointer; border-radius: 4px; }
+.danger-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.error-msg { color: var(--danger); font-size: 0.85em; margin: 5px 0; min-height: 1.2em; }
+
