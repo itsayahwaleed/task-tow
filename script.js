@@ -59,3 +59,9 @@ const addTask = () => {
     taskInput.value = '';
     renderTasks();
 };
+// جعل الدوال متاحة عالمياً للأيقونات (onclick)
+window.toggleStatus = (id) => {
+    tasks = tasks.map(t => t.id === id ? {...t, completed: !t.completed} : t);
+    updateStorage();
+    renderTasks();
+};
