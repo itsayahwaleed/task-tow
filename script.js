@@ -104,3 +104,15 @@ window.openRenameModal = (id) => {
 const closeModal = () => {
     customModal.style.display = 'none';
 };
+// 5. مراقبة الأحداث
+addTaskBtn.addEventListener('click', addTask);
+document.querySelector('#cancelBtn').addEventListener('click', closeModal);
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        currentFilter = e.target.dataset.filter;
+        renderTasks();
+    });
+});
