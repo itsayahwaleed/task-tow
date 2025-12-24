@@ -78,3 +78,29 @@ window.confirmDelete = (id) => {
         renderTasks();
     };
 };
+
+window.openRenameModal = (id) => {
+    currentEditId = id;
+    const task = tasks.find(t => t.id === id);
+    document.querySelector('#modalTitle').textContent = "Rename Task";
+    modalInput.style.display = 'block';
+    modalInput.value = task.text;
+    modalError.textContent = '';
+    customModal.style.display = 'flex';
+
+    document.querySelector('#confirmBtn').onclick = () => {
+        const error = validate(modalInput.value);
+        if (error) {
+            modalError.textContent = error;
+            return;
+        }
+        tasks = tasks.map(t => t.id === id ? {...t, text: modalInput.value.trim()} : t);
+        updateStorage();
+        closeModal();
+        renderTasks();
+    };
+};
+
+const closeModal = () => {
+    customModal.style.display = 'none';
+};
