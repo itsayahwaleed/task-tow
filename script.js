@@ -121,3 +121,9 @@ document.querySelector('#deleteAllBtn').addEventListener('click', () => {
     updateStorage();
     renderTasks();
 });
+
+document.querySelector('#deleteDoneBtn').addEventListener('click', () => {
+    tasks = tasks.filter(t => !t.completed);
+    updateStorage();
+    renderTasks();
+});
