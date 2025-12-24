@@ -116,3 +116,8 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         renderTasks();
     });
 });
+document.querySelector('#deleteAllBtn').addEventListener('click', () => {
+    tasks = [];
+    updateStorage();
+    renderTasks();
+});
