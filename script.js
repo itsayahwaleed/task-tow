@@ -19,3 +19,12 @@ const validate = (val) => {
     if (/^\d/.test(val.trim())) return "Task cannot start with a number.";
     return null;
 };
+// 4. العمليات الأساسية
+const renderTasks = () => {
+    taskList.innerHTML = '';
+    
+    const filtered = tasks.filter(t => {
+        if (currentFilter === 'done') return t.completed;
+        if (currentFilter === 'todo') return !t.completed;
+        return true;
+    });
