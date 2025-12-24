@@ -19,7 +19,7 @@
             <p id="errorMessage" class="error-msg"></p>
             <button id="addTaskBtn" class="primary-btn">Add new task</button>
         </div>
-         <h2>odo List</h2>
+         <h2>todo List</h2>
         <div class="filter-group">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="done">Done</button>
@@ -34,6 +34,19 @@
             <button id="deleteAllBtn" class="danger-btn">Delete All Tasks</button>
         </div>
     </div>
+     <div id="customModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 id="modalTitle">Rename Task</h3>
+            <input type="text" id="modalInput">
+            <p id="modalError" class="error-msg"></p>
+            <div class="modal-buttons">
+                <button id="confirmBtn" class="save-btn">Save</button>
+                <button id="cancelBtn" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
